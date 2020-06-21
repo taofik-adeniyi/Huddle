@@ -8,6 +8,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 .main-container {
+    width: 100%;
     display: grid;
     grid-template-rows: 0.2fr 1fr 0.2fr;
     grid-template-columns: 1fr 1fr;
@@ -16,7 +17,7 @@ body {
         "dashboard content"
         "footer footer";
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
     .main-container {
         grid-template-rows: 0.2fr auto 1fr 0.2fr;
         grid-template-columns: 1fr;
@@ -34,9 +35,9 @@ body {
     margin: 50px 0 50px 130px;
     width: 180px;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
     .header img {
-        margin: 20px 0 50px 40px;
+        margin: 50px 0 50px 50px;
         width: 150px;
     }
 }
@@ -48,15 +49,16 @@ body {
     margin: 0 0 0 130px;
     width: 600px;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
     .dashboard img {
-        width: 250px;
-        margin: 0 0 0 40px;
+        width: 320px;
+        margin: 0 0 0 50px;
     }
 }
 .content {
     color: gray;
     grid-area: content;
+    align-items: center;
 }
 .content h1 {
     text-transform: capitalize;
@@ -64,11 +66,13 @@ body {
     padding: 5px 180px 0 40px;
     font-size: 32px;
     font-family: 'Poppins', sans-serif;
+    /* word-wrap: break-word; */
 }
 .content p {
     color: honeydew;
     padding: 0 120px 0 40px;
     font-weight: 400;
+    /* word-wrap: break-word; */
 }
 .content button {
     color: red;
@@ -80,19 +84,21 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     font-weight: bold;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
     .content h1 {
         padding: 10px;
-        font-size: 22px;
+        font-size: 26px;
         text-align: center;
+        word-wrap: break-word;
     }
     .content p {
         padding: 20px;
         font-weight: normal;
         text-align: center;
+        word-wrap: break-word;
     }
     .content button {
-        margin-left: 75px;
+        margin-left: 130px;
     }
 }
 .footer {
@@ -105,9 +111,9 @@ body {
     background: none;
     grid-area: footer;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
     .footer {
-        margin: 0 0 20px 115px;
-        text-align: left;
+        margin: 5px 0 10px 110px;
+        text-align: center;
     }
 }
